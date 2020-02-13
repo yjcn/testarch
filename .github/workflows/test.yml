@@ -16,7 +16,7 @@ jobs:
         with:
           architecture: ${{ matrix.arch }}
           distribution: buster
-          #additionalArgs: <additional args for architecture specific docker, optional>
+          additionalArgs: <additional args for architecture specific docker, optional>
           run: |
             uname -a
             echo ::set-output name=uname::$(uname -a)
