@@ -6,15 +6,15 @@ jobs:
   armv7_job:
     runs-on: ubuntu-18.04
     name: Build on ARMv7
-    strategy:
-       matrix:
-         arch: [armv7] 
+#     strategy:
+#        matrix:
+#          arch: [armv7] 
     steps:
       - uses: actions/checkout@v1.0.0
       - uses: uraimo/run-on-arch-action@v1.0.7
         id: runcmd
         with:
-          architecture: ${{ matrix.arch }}
+          architecture: armv7
           distribution: buster
           additionalArgs: <additional args for architecture specific docker, optional>
           run: |
